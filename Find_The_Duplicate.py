@@ -4,6 +4,8 @@ class Solution:
         # - Can be solved by a lot of methods 
         # - PATTERN : Linked List Cycle, Binary Search
         
+        # Linked List Cycle detection method is mostly used. 
+        
         # - Below we have used the - mark the index traversed with -1 multiple ... 
         # and if we get to some number already negative then the index which led us to 
         # this number is the repeating one
