@@ -19,9 +19,9 @@
         ans = 1
         
         # TRICK PART : now if we multiply a number twice the power doubles right ?!! ... so here what we
-        # will do is , we will  multiply the x as many times possible and brake the power to half every time 
+        # will do is , we will  multiply the X as many times as possible making the number bigger and braking the power to half every time 
         # until we reach to an end point of 1 , or 0. BUT BEFORE ALL THAT , if the power is ODD then it cannot be broken into
-        # half , so if it is half then just remove x^1 from it to make it even and then multiply at last , that what we are doing here
+        # half , so if it is odd then just remove x^1 from it to make it even and then multiply at last , that what we are doing here
         # in the  IF part.
         while n :
             
