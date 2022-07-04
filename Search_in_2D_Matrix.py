@@ -1,10 +1,8 @@
 # LC - 74
+# Video Link -  - https://www.youtube.com/watch?v=ZYpYur0znng&list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&index=15&ab_channel=takeUforward
 
 # 2 Approaches - BINARY Search Ususally - done below
-#              - 1 more better approach is linked - https://www.youtube.com/watch?v=ZYpYur0znng&list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&index=15&ab_channel=takeUforward
-#              - In that other approach we take a the last element of the first row as Start point , now if the target is smaller than the CURRENT , we move to the RIGHT 
-#              - and if the target is greater than the CURRENT , we move one step DOWN . 
-#              - We keep doing this until we find our target or we go out of bounds
+#              - 1 more BETTER approach - Done after Binary Search
 
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
@@ -35,3 +33,41 @@ class Solution:
             else:
                 high = mid -1        
         return False
+
+    
+    
+    
+    
+    
+#          - In this approach we take a the last element of the first row as Start point , now if the target is smaller than the CURRENT , we move to the RIGHT 
+#          - and if the target is greater than the CURRENT , we move one step DOWN . 
+#          - We keep doing this until we find our target or we go out of bounds
+
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        
+        if len(matrix) == 0 :
+            return False
+        
+        n = len(matrix)
+        m = len(matrix[0])
+        
+        i = 0
+        j = m-1
+        
+        #print (matrix[i][j])
+        
+        while (i < n and j >= 0) :
+            
+            if matrix[i][j] == target:
+                return True
+            
+            elif matrix[i][j] < target:
+                i += 1
+            
+            else:
+                j -= 1
+        return False
+    
+    # Time Complexity - O(m+n)
+    # Space Complexity = O(1)
