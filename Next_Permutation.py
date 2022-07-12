@@ -38,7 +38,7 @@ class Solution:
         if p2 == p1 :
             return (nums.reverse())
         
-        #Swap the pointers if the above IF is not the case
+        #Swap the pointers if the immediate above IF is not the case
         temp = nums[p2]
         nums[p2] = nums[p1]
         nums[p1] = temp
